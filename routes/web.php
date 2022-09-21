@@ -1,7 +1,5 @@
 <?php
 //change for git
-//ffffffff
-//hhhh
 use Illuminate\Support\Facades\Route;
 
 /*
