@@ -7,14 +7,14 @@
     <style>
       hr {
         height: 2px;
-        background-color: #ffffff;
-        border: none;
+        background-color: #151e23;
+        border: 0;
       }
     </style>
-    <title>Главная</title>
+    <title>@yield('title')</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
-<body class="bg-dark">
+<body class="bg-white" text-white>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark ">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Hackweb</a>
@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                  <a class="nav-link active" aria-current="page" href="/">Главная</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="/about">О нас</a>
@@ -33,9 +33,10 @@
             </div>
             <a class="btn btn-warning" href="/">Отзывы</a>
         </div>
-        <hr>
     </nav>
-    <h1>Хедер</h1>
+ <br>   
+<div class="container mt-5">
     @yield('main_header')
+</div>
 </body>
 </html>
