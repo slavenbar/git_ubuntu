@@ -9,11 +9,17 @@
     <style>
         footer {
 /* Позиционируем footer внизу main */
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+   /* position: absolute;
   /* Высота footer по умолчанию */
-  height: 30px;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 10;
+    padding: 0;
+    width: 100%;
+    height: 200px;
+    background-color: yellow;
 }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
@@ -30,33 +36,34 @@
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
           <li><a href="/" class="nav-link px-2 text-white">Главная</a></li>
           <li><a href="/about" class="nav-link px-2 text-white">О нас</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Галерея</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Контакты</a></li>
+          <li><a href="/galery" class="nav-link px-2 text-white">Галерея</a></li>
+          <li><a href="/contact" class="nav-link px-2 text-white">Контакты</a></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+          <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Поиск..." aria-label="Search">
         </form>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+          <button type="button" class="btn btn-outline-light me-2">Логин</button>
+          <button type="button" class="btn btn-warning">Регистрация</button>
         </div>
       </div>
     </div>
 </header> 
-<div class="w3-container w3-red" >
+<div style="text-align:center" class="w3-container w3-red" >
     @yield('main_header')
     <br>
     <br>
 </div>
-<div class="container">
-  <footer class="py-3 my-4">
+<div class="wrapper">
+  <footer class="wrapper">
+    <br>
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Главная</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">О нас</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Галерея</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Контакты</a></li>
+      <li class="nav-item"><a href="/" class="nav-link px-2 text-center">Главная</a></li>
+      <li class="nav-item"><a href="/about" class="nav-link px-2 text-center">О нас</a></li>
+      <li class="nav-item"><a href="/galery" class="nav-link px-2 text-center">Галерея</a></li>
+      <li class="nav-item"><a href="/galery" class="nav-link px-2 text-center">Контакты</a></li>
     </ul>
     <p class="text-center text-muted">© 2022 Company Laravel PHP</p>
   </footer>

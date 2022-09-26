@@ -21,6 +21,14 @@ Route::get('/about', function () {
     return view("about");
 });
 
+Route::get('/galery', function () {
+    return view("galery");
+});
+
+Route::get('/contact', function () {
+    return view("contact");
+});
+
 Route::get('/user/{id}/{name}', function ($id,$name) {
     return "ID:" . $id."Name:" . $name;
 });
