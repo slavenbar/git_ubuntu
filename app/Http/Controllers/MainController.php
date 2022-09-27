@@ -29,7 +29,9 @@ class MainController extends Controller
 
     public function reviewPage()
     {
-        return view('review');
+        //return view('review');
+        $reviews = new Contact();
+        return view('review', ['reviews' => $reviews->all()]);
     }
 
     public function review_check(Request $request)
