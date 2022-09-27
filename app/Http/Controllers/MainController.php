@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -38,5 +39,13 @@ class MainController extends Controller
             'subject' => 'required|min:6|max:100',
             'message' => 'required|min:15|max:250'
         ]);
+
+        $review = new Contact();
+        $review->email = $request->input('email');
+        $review->subject = $request->input('subject');
+        $review->message = $request->input('message');
+        $review->save();
+
+        return redirect()->route('review');
     }
 }
