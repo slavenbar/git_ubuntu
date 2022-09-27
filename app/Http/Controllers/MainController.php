@@ -26,8 +26,13 @@ class MainController extends Controller
         return view('contact');
     }
 
-        public function reviewPage()
+    public function reviewPage()
     {
         return view('review');
+    }
+
+    public function review_check(Request $request)
+    {
+        dd($request);
     }
 }

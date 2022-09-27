@@ -23,6 +23,7 @@ Route::get('/galery', [MainController::class,'galeryPage'])->name('galery');
 Route::get('/contact', [MainController::class,'contactPage'])->name('contact');
 
 Route::get('/review', [MainController::class,'reviewPage'])->name('review');
+Route::post('/review/check', [MainController::class,'review_check']);
 
 //Route::get('/user/{id}/{name}', function ($id,$name) {
     //return "ID:" . $id."Name:" . $name;

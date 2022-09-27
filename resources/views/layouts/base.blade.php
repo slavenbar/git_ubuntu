@@ -38,6 +38,7 @@
           <li><a href="/about" class="nav-link px-2 text-white">О нас</a></li>
           <li><a href="/galery" class="nav-link px-2 text-white">Галерея</a></li>
           <li><a href="/contact" class="nav-link px-2 text-white">Контакты</a></li>
+          <li><a href="/review" class="nav-link px-2 text-white">Отзывы</a></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
