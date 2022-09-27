@@ -1,6 +1,7 @@
 <?php
 //change for git
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,23 +13,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [MainController::class, 'index'])->name('index');
+//Route::get('/', [MainController::class],'home');
 
-Route::get('/', function () {
-    return view("home");
-});
+Route::get('/about', [MainController::class,'aboutPage'])->name('about');
 
-Route::get('/about', function () {
-    return view("about");
-});
+Route::get('/galery', [MainController::class,'galeryPage'])->name('galery');
 
-Route::get('/galery', function () {
-    return view("galery");
-});
+Route::get('/contact', [MainController::class,'contactPage'])->name('contact');
 
-Route::get('/contact', function () {
-    return view("contact");
-});
+Route::get('/review', [MainController::class,'reviewPage'])->name('review');
 
-Route::get('/user/{id}/{name}', function ($id,$name) {
-    return "ID:" . $id."Name:" . $name;
-});
+//Route::get('/user/{id}/{name}', function ($id,$name) {
+    //return "ID:" . $id."Name:" . $name;
+//});
